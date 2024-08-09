@@ -58,8 +58,9 @@ app.prepare().then(() => {
   const generateWords = () => ['apple', 'banana', 'cherry', 'date', 'fig', 'grape', 'kiwi', 'lemon', 'mango', 'orange'];
 
   server.all('*', (req, res) => {
-    return handle(req, res);
+    return res.json({adonis: 'wewew'})
   });
+
 
   const port = process.env.PORT || 3001;
   httpServer.listen(port, (err) => {
